@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Menu Hover Effects</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<ul>
+		<li><a href="#_">Menu Item 1</a></li>
+		<li><a href="#_">Menu Item 2</a></li>
+		<li><a href="#_">Menu Item 3</a></li>
+		<li><a href="#_">Menu Item 4</a></li>
+	</ul>
+
+</body>
+</html>
+
+<style>
+
+html, body{ margin:0px; padding:0px; }
+
+body{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height:100vh;
+	background:#1b1d1d;
+	font-family: 'Roboto', sans-serif;
+}
+
+ul, li{
+	list-style: none;
+	padding:0px;
+	margin:0px;
+}
+
+li{
+	display:inline-block;
+}
+
+li a {
+	padding:10px;
+	display:block;
+	text-decoration: none;
+	text-transform: uppercase;
+	color:#ddd;
+	position:relative;
+}
+ul li {
+    position: relative;
+}
+ul li a:before {
+    position: absolute;
+    content: "";
+    height: 5px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: #692686;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+    direction: left;
+    transform-origin: left;
+}
+ul li:hover> a:before {
+    transform: scaleX(1);
+}
+</style>
